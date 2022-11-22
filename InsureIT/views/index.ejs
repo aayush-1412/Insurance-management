@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+    <h1 >DashBoard</h1>
+  </nav>
+    <table class="table">
+        <thead>
+          <tr>
+            
+            <th scope="col">Unique ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">City</th>
+            <th scope="col">State</th>
+            <th scope="col">Nominee Name</th>
+           
+            <th scope="col">Insurance Purchased</th>
+            <th scope="col">Days Left</th>
+          </tr>
+        </thead>
+        <tbody>
+       
+        <%customerList.forEach(mycustomer=>{%>
+            <tr>
+              <td><%= mycustomer._id %></td>
+                <td><%= mycustomer.fullname %></td>
+                <td><%= mycustomer.email %></td>
+                <td><%= mycustomer.address %></td>
+                <td><%= mycustomer.city %></td>
+               
+                <td><%= mycustomer.state %></td>
+                <td><%= mycustomer.nomineeName %></td>
+            
+                <td><%= mycustomer.insurance %></td>
+                
+                <td>365</td>
+                
+            </tr>
+        <%})%>
+        </tbody>
+      </table>
+      <a href="http://localhost:8000">
+        <button type="button" class="btn btn-primary">Back To Home</button>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_XlKZbMOclP0u06BOLFkzJBnzcogCbuf5tbxNL-FiofUuaw/viewform?usp=sf_link">
+      <button type="button" class="btn btn-primary">Claim Insurance</button>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSc22uRTzZFY-52vX4CYUhXL49Wwm6z9QI2Bvv_CTgrq6l4FOA/viewform?usp=sf_link">
+        <button type="button" class="btn btn-primary">FeedBack</button>
+      </a>
+    
+   
+      
+</body>
+</html>
